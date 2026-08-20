@@ -45,3 +45,4 @@ CNAME             o domínio, exigido pelo GitHub Pages
 | "Sou Brasil. Sou São Paulo. Sou Republicanos." | Frase do próprio candidato, recorrente nas publicações dele |
 | Recordes de corrida (168 km rua, 201 km esteira, Ironman) | Biografia do perfil oficial dele no Instagram |
 | Titularidade do domínio | RDAP do Registro.br — Flavio Henrique Pinto dos Santos |
+| Nome civil e CNPJ da campanha (rodapé, exigido pelo rótulo de anúncio Meta/Google) | Comprovante de inscrição da Receita Federal — CNPJ 68.461.977/0001-40, dígitos verificadores conferidos por cálculo |

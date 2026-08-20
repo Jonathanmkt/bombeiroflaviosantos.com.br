@@ -158,6 +158,13 @@
     font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
     color:rgba(157,176,204,.55);
   }
+  /* identificacao de quem financia o anuncio: exigida por Meta/Google para o rotulo */
+  footer .responsavel{
+    display:block;margin-top:9px;
+    text-transform:none;letter-spacing:.01em;
+    font-size:12.5px;line-height:1.5;
+    color:var(--texto-suave);
+  }
 
   @media (prefers-reduced-motion:reduce){
     .selo::before{animation:none}
@@ -203,7 +210,11 @@
     Acompanhe no Instagram
   </a>
 
-  <footer>bombeiroflaviosantos.com.br</footer>
+  <footer>
+    bombeiroflaviosantos.com.br
+    <span class="responsavel">Site e anúncios de responsabilidade de Flávio Henrique Pinto dos Santos<br>
+    CNPJ da campanha 68.461.977/0001-40</span>
+  </footer>
 </main>
 </body>
 </html>

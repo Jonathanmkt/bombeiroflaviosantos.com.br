@@ -1,10 +1,26 @@
 # bombeiroflaviosantos.com.br
 
-Site de **Bombeiro Flávio Santos** — candidato a Deputado Estadual por São Paulo (Republicanos),
-bombeiro e guarda-vidas de Praia Grande, Baixada Santista. Cliente da Idealis.
+Site de **Flávio Henrique Pinto dos Santos, 10193** — candidato a Deputado Estadual por São Paulo
+(Republicanos). Cliente da Idealis.
 
-Hoje no ar apenas a **página de espera** (uma tela, sem navegação), enquanto o site definitivo é
-construído.
+⚠️ **Desde 23/08/2026 este domínio serve a MESMA página de `flaviosantos10193.com.br`**, e a
+palavra "bombeiro" não aparece mais em nenhum conteúdo renderizado — só no próprio domínio, que
+é o que o cliente possui.
+
+**Por quê:** o rótulo de anúncio ("Pago por…", categoria "assuntos sociais, eleições ou política")
+foi reprovado **duas vezes** nesta página. A primeira reprovação, corrigida em 20/08/2026, era
+falta do nome civil e do CNPJ no rodapé. Depois da segunda, o CEO decidiu (23/08/2026) publicar
+uma versão sem o nome de campanha "Bombeiro Flávio Santos" — só cargo, **nome civil completo** e
+número — e apontar os dois domínios para ela.
+
+**O conteúdo anterior** (lema, recordes esportivos, menção a guarda-vidas, link do Instagram)
+está preservado no histórico do git, no commit anterior a esta troca.
+
+⚠️ **A página vive duplicada em dois repositórios**, porque o GitHub Pages aceita um domínio
+personalizado por repositório. O gêmeo é `Jonathanmkt/flaviosantos10193.com.br`, e a única
+diferença entre os dois arquivos é o `CNAME` e as três URLs de auto-referência (`canonical`,
+`og:url`, `og:image`). **Ao alterar esta página, altere as duas** — mudar só uma faz os domínios
+divergirem em silêncio.
 
 ## Como está publicado
 

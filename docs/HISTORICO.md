@@ -2,6 +2,36 @@
 
 Diário append-only. Entrada mais recente no topo.
 
+## 2026-08-25 — Volta a ser site distinto: o conteúdo original de campanha volta ao ar
+
+**O quê:** `index.html` foi restaurado para a versão anterior ao commit `93a2f1c` — a página
+única e original deste domínio volta ao ar: nome de campanha "Bombeiro Flávio Santos", selo
+"site em construção", o lema "Sou Brasil. Sou São Paulo. Sou Republicanos.", a lista de recordes
+esportivos e o link do Instagram. O rodapé com o nome civil completo e o CNPJ da campanha
+(68.461.977/0001-40) permanece — aquela é exigência de plataforma de anúncio e não mudou.
+
+**Por quê:** ordem do CEO em 25/08/2026, em sessão direta — os dois domínios do candidato voltam
+a ser sites distintos. Em 23/08 este domínio tinha passado a servir a mesma página do
+`flaviosantos10193.com.br`, por causa da segunda reprovação do rótulo de anúncio. O
+`flaviosantos10193.com.br` fica exatamente como está, com o conteúdo sem o termo "bombeiro" —
+nada muda naquele repositório, e os dois deixam de ser gêmeos.
+
+⚠️ **Consequência aceita conscientemente:** trazendo o nome de campanha de volta, este domínio
+volta a estar sujeito à mesma reprovação de rótulo de anúncio de 20 e 23/08. O CEO foi avisado e
+decidiu assim.
+
+**Infra conferida pelo devops-infra na mesma rodada, sem alteração:** os dois domínios já estão
+em zonas Cloudflare separadas, em DNS only, cada um apontando para o GitHub Pages do seu próprio
+repositório, com certificado Let's Encrypt próprio e HTTPS forçado, sem page rules ou
+redirecionamento cruzado. O que unia os dois era só o conteúdo.
+
+**Conferido:** Chrome de verdade (`playwright-core`, canal `chrome`, servindo o diretório na
+porta 8099) em 360, 414, 768 e 1280 px — transbordo 0, sem rolagem horizontal, console sem erro
+nem aviso, nenhuma requisição quebrada (só `index.html` e `assets/flavio.jpg`, ambos 200),
+`<title>` de volta a "Bombeiro Flávio Santos — em breve".
+
+**Arquivos-chave:** `index.html`, `README.md`.
+
 ## 2026-08-23 — Segunda reprovação: a página virou a mesma do domínio novo, sem o nome de campanha
 
 **O quê:** A página inteira foi substituída pela do `flaviosantos10193.com.br`. Saíram o nome de

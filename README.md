@@ -3,24 +3,22 @@
 Site de **Flávio Henrique Pinto dos Santos, 10193** — candidato a Deputado Estadual por São Paulo
 (Republicanos). Cliente da Idealis.
 
-⚠️ **Desde 23/08/2026 este domínio serve a MESMA página de `flaviosantos10193.com.br`**, e a
-palavra "bombeiro" não aparece mais em nenhum conteúdo renderizado — só no próprio domínio, que
-é o que o cliente possui.
+⚠️ **Desde 25/08/2026 este domínio voltou a ser um site distinto de `flaviosantos10193.com.br`.**
+A página original está de volta ao ar: nome de campanha "Bombeiro Flávio Santos", selo "site em
+construção", o lema "Sou Brasil. Sou São Paulo. Sou Republicanos.", a lista de recordes
+esportivos e o link do Instagram. O rodapé com o nome civil completo e o CNPJ da campanha
+(68.461.977/0001-40) permanece — é exigência da plataforma de anúncio e não mudou.
 
-**Por quê:** o rótulo de anúncio ("Pago por…", categoria "assuntos sociais, eleições ou política")
-foi reprovado **duas vezes** nesta página. A primeira reprovação, corrigida em 20/08/2026, era
-falta do nome civil e do CNPJ no rodapé. Depois da segunda, o CEO decidiu (23/08/2026) publicar
-uma versão sem o nome de campanha "Bombeiro Flávio Santos" — só cargo, **nome civil completo** e
-número — e apontar os dois domínios para ela.
+**Por quê:** entre 23/08 e 25/08/2026 este domínio serviu a mesma página de
+`flaviosantos10193.com.br`, sem o termo "bombeiro", por causa da reprovação do rótulo de anúncio
+(ver `docs/HISTORICO.md`). Em 25/08/2026 o CEO decidiu que os dois domínios voltam a ser sites
+distintos. **Consequência aceita conscientemente:** trazendo o nome de campanha de volta, este
+domínio volta a estar sujeito à mesma reprovação de rótulo de anúncio de 20 e 23/08 — o CEO foi
+avisado e decidiu assim mesmo.
 
-**O conteúdo anterior** (lema, recordes esportivos, menção a guarda-vidas, link do Instagram)
-está preservado no histórico do git, no commit anterior a esta troca.
-
-⚠️ **A página vive duplicada em dois repositórios**, porque o GitHub Pages aceita um domínio
-personalizado por repositório. O gêmeo é `Jonathanmkt/flaviosantos10193.com.br`, e a única
-diferença entre os dois arquivos é o `CNAME` e as três URLs de auto-referência (`canonical`,
-`og:url`, `og:image`). **Ao alterar esta página, altere as duas** — mudar só uma faz os domínios
-divergirem em silêncio.
+**Este repositório não tem mais gêmeo.** `flaviosantos10193.com.br` segue em repositório próprio,
+com o conteúdo sem o termo "bombeiro", e as duas páginas agora evoluem de forma independente —
+alterar uma não afeta a outra.
 
 ## Como está publicado
 

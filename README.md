@@ -3,22 +3,20 @@
 Site de **Flávio Henrique Pinto dos Santos, 10193** — candidato a Deputado Estadual por São Paulo
 (Republicanos). Cliente da Idealis.
 
-⚠️ **Desde 25/08/2026 este domínio voltou a ser um site distinto de `flaviosantos10193.com.br`.**
-A página original está de volta ao ar: nome de campanha "Bombeiro Flávio Santos", selo "site em
-construção", o lema "Sou Brasil. Sou São Paulo. Sou Republicanos.", a lista de recordes
-esportivos e o link do Instagram. O rodapé com o nome civil completo e o CNPJ da campanha
-(68.461.977/0001-40) permanece — é exigência da plataforma de anúncio e não mudou.
+Desde 25/08/2026 este domínio é a **landing page completa** do candidato, substituindo a antiga
+tela "em breve" de uma coluna só. A página tem sete blocos: herói (reproduzindo o carrossel de 3
+posts da campanha) · "Quem sou eu" · frase de transição · as 5 bandeiras ("Pelo que eu luto") · o
+Pacote de Valorização Policial/Bombeiro (10 propostas em 6 frentes) · fecho com contato e
+Instagram · rodapé legal.
 
-**Por quê:** entre 23/08 e 25/08/2026 este domínio serviu a mesma página de
-`flaviosantos10193.com.br`, sem o termo "bombeiro", por causa da reprovação do rótulo de anúncio
-(ver `docs/HISTORICO.md`). Em 25/08/2026 o CEO decidiu que os dois domínios voltam a ser sites
-distintos. **Consequência aceita conscientemente:** trazendo o nome de campanha de volta, este
-domínio volta a estar sujeito à mesma reprovação de rótulo de anúncio de 20 e 23/08 — o CEO foi
-avisado e decidiu assim mesmo.
+⚠️ **Risco de rótulo de anúncio ainda em pé.** O nome de campanha "Bombeiro Flávio Santos" e o
+termo "bombeiro" aparecem na página. Esse mesmo termo já causou duas reprovações de rótulo de
+anúncio (Meta/Google) em 20/08 e 23/08/2026 — ver `docs/HISTORICO.md`. O CEO decidiu manter o nome
+de campanha mesmo assim; se o rótulo voltar a ser reprovado, é o mesmo problema recorrente, não um
+bug novo.
 
-**Este repositório não tem mais gêmeo.** `flaviosantos10193.com.br` segue em repositório próprio,
-com o conteúdo sem o termo "bombeiro", e as duas páginas agora evoluem de forma independente —
-alterar uma não afeta a outra.
+**Este repositório não tem gêmeo.** `flaviosantos10193.com.br` segue em repositório próprio, com
+conteúdo independente — alterar um não afeta o outro.
 
 ## Como está publicado
 
@@ -36,19 +34,40 @@ minutos para refletir.
 ## Arquivos
 
 ```
-index.html        a página inteira: HTML, CSS e conteúdo, sem dependência externa
-assets/flavio.jpg retrato do candidato
-CNAME             o domínio, exigido pelo GitHub Pages
+index.html          a pagina inteira: HTML, CSS e conteudo, sem dependencia externa
+assets/marca/       vetores da marca (assinatura, capacete, selo, onda, selo do partido),
+                     extraidos de docs/referencias/praguinha.pdf
+assets/fontes/      Transducer e TT Runs em WOFF2, subconjuntadas para pt-BR (90,9 KB no total)
+assets/fotos/       retrato, corredor, ponte, ilustracao e ondas, em AVIF/WebP, 3 larguras cada
+assets/js/site.js   sprite de icones Lucide, revela por IntersectionObserver, contagem animada,
+                     barra de progresso de leitura, atalho do Instagram — 4 KB, sem dependencia
+scripts/            geram assets a partir dos originais em MIDIA-VIRTUETECH (ver abaixo)
+docs/               ACERVO-DE-CONTEUDO.md, BRIEFING-LANDING-PAGE.md, marca/MARCA.md, HISTORICO.md
+CNAME               o dominio, exigido pelo GitHub Pages
 ```
 
-## ⚠️ Duas pendências conhecidas
+## Mídia fora do git
 
-1. **O retrato está em 150×150 px**, capturado do perfil público do Instagram — é o maior tamanho
-   que o Instagram expõe. Ele é exibido em 132 px, então não aparenta baixa qualidade, **mas não
-   serve para nenhum uso maior**. Ao receber a foto oficial do cliente, basta substituir
-   `assets/flavio.jpg` — nada mais muda.
-2. **O número de urna não está na página**, de propósito: ele não foi confirmado em fonte oficial
-   até a publicação. Só entra depois de conferido no TSE ou com o cliente.
+Os originais pesados (manual de identidade visual, retrato oficial, fotos com fundo transparente,
+ondas, ponte e as fontes com a licença do pacote) vivem em
+`C:\Projetos\MIDIA-VIRTUETECH\clientes\flavio-santos\landing-page\bruto\`, fora deste repositório.
+Os scripts em `scripts/` sabem buscar lá e avisam, em vez de falhar calado, quando a pasta não
+existe.
+
+## Decisões que não aparecem no código
+
+- **Dois verdes de propósito.** O `#009C3B` do manual de marca reprova em contraste AA para texto
+  pequeno (3,61:1). A página usa `--verde-texto: #00822F` (4,96:1) para texto; o verde do manual
+  segue mandando em superfície, régua e marcador.
+- **A imagem de fundo da ponte é um recorte do próprio carrossel da campanha**, sem arquivo
+  original — está desbotada de propósito, como textura. Ao chegar o original, é trocar um arquivo.
+- **As ondas do herói foram desenhadas pelo CEO** e não encostam na base entre 42% e 50% da
+  largura (193 colunas de pixel com o azul indo até embaixo) — hoje isso fica escondido atrás da
+  foto, mas é sorte de enquadramento, não garantia.
+- **A ilustração da criança é sintética (Gemini)** — o `alt` diz "Ilustração" de propósito, para
+  não sugerir uma pessoa real.
+- Sem JavaScript a página permanece toda visível: um `<noscript>` desfaz a opacidade zero usada
+  pelo revela por rolagem.
 
 ## De onde veio cada informação da página
 
@@ -57,6 +76,7 @@ CNAME             o domínio, exigido pelo GitHub Pages
 | Candidato a Deputado Estadual, Republicanos | Convenção do partido, noticiada por A Tribuna, Costa Norte e BS9 (01–03/08/2026) |
 | Bombeiro / guarda-vidas de Praia Grande | Mesmas reportagens + perfil `@bombeiroflaviosantos` |
 | "Sou Brasil. Sou São Paulo. Sou Republicanos." | Frase do próprio candidato, recorrente nas publicações dele |
-| Recordes de corrida (168 km rua, 201 km esteira, Ironman) | Biografia do perfil oficial dele no Instagram |
+| As 5 bandeiras e o Pacote de Valorização Policial/Bombeiro | Artes da campanha (carrossel e material gráfico), transcritas em `docs/ACERVO-DE-CONTEUDO.md` |
+| Paleta, tipografia e vetores da marca | `docs/referencias/praguinha.pdf` (vetor puro) e o manual de identidade visual |
 | Titularidade do domínio | RDAP do Registro.br — Flavio Henrique Pinto dos Santos |
 | Nome civil e CNPJ da campanha (rodapé, exigido pelo rótulo de anúncio Meta/Google) | Comprovante de inscrição da Receita Federal — CNPJ 68.461.977/0001-40, dígitos verificadores conferidos por cálculo |

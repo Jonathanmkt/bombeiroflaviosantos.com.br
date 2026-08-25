@@ -2,6 +2,43 @@
 
 Diário append-only. Entrada mais recente no topo.
 
+## 2026-08-25 — O "em breve" vira a landing page completa do candidato
+
+**O quê:** `index.html` deixou de ser a tela única "em breve" e passou a ser uma landing page de
+sete blocos: herói (reproduzindo o carrossel de 3 posts da campanha, com a linha de propaganda
+eleitoral na vertical, por pedido do CEO) · "Quem sou eu" · frase de transição · as 5 bandeiras
+("Pelo que eu luto") · o Pacote de Valorização Policial/Bombeiro (10 propostas em 6 frentes) ·
+fecho com contato e Instagram · rodapé legal. Entraram junto: vetores da marca extraídos de
+`docs/referencias/praguinha.pdf` (vetor puro, não redesenho) em `assets/marca/`; as fontes
+Transducer e TT Runs convertidas para WOFF2 e subconjuntadas para pt-BR (90,9 KB no total,
+escolhidas comparando largura de avanço de glifo contra as fontes embutidas no manual de marca);
+fotos em AVIF/WebP em três larguras em `assets/fotos/`; e `assets/js/site.js` (4 KB, sem
+dependência) com sprite de ícones Lucide, revela por `IntersectionObserver`, barra de progresso de
+leitura e contagem animada dos números 257 e 7,5 milhões.
+
+**Por quê:** o conteúdo e as artes da campanha já existiam; faltava a página que os organizasse.
+A paleta do manual de marca (`#009C3B`) reprova em contraste AA para texto pequeno (3,61:1), por
+isso a página usa um segundo verde (`#00822F`, 4,96:1) só para texto — o verde do manual continua
+mandando em superfície, régua e marcador. A imagem de fundo da ponte não tem arquivo original: foi
+recortada do próprio carrossel da campanha e desbotada de propósito, para servir de textura. As
+ondas foram desenhadas pelo CEO e não encostam na base entre 42% e 50% da largura (193 colunas de
+pixel) — hoje isso fica atrás da foto, mas é sorte de enquadramento. A ilustração da criança é
+sintética (Gemini), com `alt` de propósito dizendo "Ilustração" para não sugerir pessoa real.
+
+**Conferido:** Chrome de verdade (`playwright-core`, canal `chrome`) em 360, 414, 768, 1280, 1440
+e 1920 px — sem rolagem horizontal, console limpo, nenhuma requisição quebrada. Contraste: zero
+reprovações, bloco por bloco contra o fundo real, aplicando a regra de texto grande da WCAG. Sem
+JavaScript: 0 blocos invisíveis (via `<noscript>`); com `prefers-reduced-motion`: 0 invisíveis e
+número já no valor final. Peso da primeira carga: 268 KB (131 imagem, 82 fonte, 45 documento, 7
+CSS, 4 JS). Revela: 24 de 24 blocos revelam ao rolar.
+
+⚠️ **README ficou desatualizado até esta rodada** — descrevia a tela "em breve" de uma coluna; foi
+reescrito nesta mesma entrada.
+
+**Arquivos-chave:** `index.html`, `assets/marca/`, `assets/fontes/`, `assets/fotos/`,
+`assets/js/site.js`, `docs/ACERVO-DE-CONTEUDO.md`, `docs/BRIEFING-LANDING-PAGE.md`,
+`docs/marca/MARCA.md`, `README.md`.
+
 ## 2026-08-25 — Volta a ser site distinto: o conteúdo original de campanha volta ao ar
 
 **O quê:** `index.html` foi restaurado para a versão anterior ao commit `93a2f1c` — a página

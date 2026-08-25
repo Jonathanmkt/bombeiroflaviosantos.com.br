@@ -1,0 +1,43 @@
+/*
+  Tokens da marca — Bombeiro Flávio Santos (10193)
+  Valores oficiais do manual de ID visual (docs/referencias/).
+  Este arquivo NÃO está aplicado no site: é material para a landing.
+*/
+
+:root {
+  /* --- paleta oficial --- */
+  --marca-navy:     #02174E;   /* C99  M100 Y45  K22 */
+  --marca-verde:    #009C3B;   /* C97  M3   Y100 K0  */
+  --verde-texto:    #00822F;   /* o verde da marca só dá 3,61:1 e reprova em AA
+                                  abaixo de 24px; este dá 4,96:1 nos dois sentidos */
+  --marca-amarelo:  #FFC708;   /* C0   M31  Y94  K0  */
+  --marca-azul:     #0744F4;   /* C91  M78  Y0   K0  */
+  --marca-branco:   #FFFFFF;
+
+  /* --- papéis, para não escolher cor no meio do CSS --- */
+  --fundo:            var(--marca-navy);
+  --fundo-claro:      var(--marca-branco);
+  --texto-sobre-navy: var(--marca-branco);   /* 17,00:1 */
+  --texto-sobre-claro:var(--marca-navy);     /* 17,00:1 */
+  --destaque:         var(--marca-amarelo);  /* 10,87:1 sobre navy */
+  --numero:           var(--marca-verde);    /*  4,71:1 sobre navy */
+  --texto-verde:      var(--verde-texto);    /*  4,96:1 sobre branco */
+
+  /* --- tipografia ---
+     Transducer é a de título (400/500/700/900), TT Runs a de apoio e número
+     (400/900), Montserrat a de texto corrido. As duas primeiras estão em WOFF2
+     em assets/fontes/ e são declaradas em assets/fontes/fontes.css:
+     IMPORTE-O antes de usar estas variáveis, senão a pilha cai no fallback.
+     Montserrat vem do Google Fonts. */
+  --fonte-titulo: "Transducer", "TT Runs", "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fonte-apoio:  "TT Runs", "Transducer", "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fonte-texto:  "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/*
+  ⚠️ Combinações que REPROVAM em contraste — não use para texto:
+     amarelo sobre branco ....... 1,56:1
+     azul vivo sobre navy ....... 2,54:1
+  ⚠️ Só em texto grande (24px, ou 19px em negrito):
+     branco sobre verde ......... 3,61:1
+*/

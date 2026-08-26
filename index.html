@@ -376,7 +376,7 @@ h3{font-family:var(--titulo);font-weight:700;line-height:1.2}
 .criancas__dado{padding:clamp(24px,3vw,34px);align-self:center}
 .bandeira--criancas .criancas__numero{
   font-family:var(--apoio);font-weight:900;
-  font-size:clamp(84px,13vw,168px);line-height:.82;
+  font-size:clamp(56px,8.4vw,108px);line-height:.86;letter-spacing:-.03em;
   letter-spacing:-.02em;color:var(--amarelo);
   font-variant-numeric:tabular-nums;
 }
@@ -387,7 +387,31 @@ h3{font-family:var(--titulo);font-weight:700;line-height:1.2}
 }
 .criancas__dado h3 em{color:var(--amarelo);font-style:normal}
 .bandeira--criancas .criancas__fonte{
-  margin-top:14px;font-size:12px;line-height:1.5;color:var(--cinza-claro);
+  margin-top:12px;font-size:12px;line-height:1.5;color:var(--cinza-claro);
+}
+/* o segundo dado: menor que o primeiro, mas com peso próprio. O 5 mil dá a
+   escala do problema; o 257 dá a gravidade — e é a distância entre os dois que
+   explica por que o aplicativo de alerta importa. */
+.bandeira--criancas .criancas__segundo{
+  /* centro a centro: com baseline o texto de duas linhas subia e ficava
+     desalinhado do numero */
+  display:flex;align-items:center;gap:16px;
+  margin-top:20px;padding-top:18px;
+  border-top:2px solid var(--amarelo);
+}
+.bandeira--criancas .criancas__segundo b{
+  font-family:var(--apoio);font-weight:900;
+  font-size:clamp(38px,5vw,58px);line-height:.9;color:var(--branco);
+  font-variant-numeric:tabular-nums;flex:none;
+}
+/* filho DIRETO: sem o `>`, esta regra também casava o <span> de dentro do <b>
+   e derrubava o número de 58px para 15px — o 257 quase sumia. */
+.bandeira--criancas .criancas__segundo > span{
+  font-size:15px;line-height:1.4;color:#DCE5F4;
+}
+.bandeira--criancas .criancas__segundo strong{color:var(--amarelo);font-weight:700}
+.bandeira--criancas .criancas__segundo small{
+  display:block;margin-top:5px;font-size:11.5px;color:var(--cinza-claro);
 }
 .criancas__foto{align-self:end;justify-self:center}
 .criancas__foto img{
@@ -678,8 +702,13 @@ footer{background:#010F35;color:var(--cinza-claro);padding:clamp(40px,6vw,64px) 
 
       <article class="bandeira bandeira--criancas" data-revela>
         <div class="criancas__dado">
-          <p class="criancas__numero"><span data-conta="257">257</span></p>
-          <h3>Crianças desaparecidas<br><em>por ano em SP.</em></h3>
+          <p class="criancas__numero"><span data-conta="5015">5.015</span></p>
+          <h3>Registros de desaparecimento<br><em>por ano em SP.</em></h3>
+
+          <p class="criancas__segundo">
+            <b><span data-conta="257">257</span></b>
+            <span>crianças <strong>não voltaram mais</strong> para casa.</span>
+          </p>
           <p class="criancas__fonte">Fonte: Ministério da Justiça — Relatório 2025</p>
         </div>
 

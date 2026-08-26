@@ -1,1 +1,9 @@
 confere-*.png
+
+# Exploração de design: o canvas montado tem ~2 MB (o editor vai embutido) e os
+# .dc.html carregam as fontes em base64. Nada disso é servido pelo site, e o
+# gera-artboards.py mais o canvas.json reconstroem tudo — é o que fica versionado.
+docs/design/*.dc.html
+docs/design/*.b64
+docs/design/*.html
+docs/design/retrato.webp

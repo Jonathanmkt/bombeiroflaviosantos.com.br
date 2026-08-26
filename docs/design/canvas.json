@@ -1,0 +1,25 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",        "x": 0,    "y": 0,    "w": 1120, "h": 900, "title": "Quem sou eu · A — Editorial" },
+    { "file": "QuemSouEuB.dc.html",  "x": 1240, "y": 0,    "w": 1120, "h": 900, "title": "Quem sou eu · B — Trajetória" },
+    { "file": "QuemSouEuC.dc.html",  "x": 2480, "y": 0,    "w": 1120, "h": 900, "title": "Quem sou eu · C — A voz dele" },
+    { "file": "FechoA.dc.html",      "x": 0,    "y": 1080, "w": 1120, "h": 720, "title": "Fecho · A — Cédula" },
+    { "file": "FechoB.dc.html",      "x": 1240, "y": 1080, "w": 1120, "h": 720, "title": "Fecho · B — Faixa" },
+    { "file": "FechoC.dc.html",      "x": 2480, "y": 1080, "w": 1120, "h": 720, "title": "Fecho · C — Compromissos" }
+  ],
+  "annotations": [
+    { "id": "qse", "x": 0, "y": -180, "w": 520,
+      "text": "QUEM SOU EU — três direções\n\nA · Editorial — o depoimento manda, o retrato ancora, os fatos viram friso no fim. É a que menos mexe no que está no ar.\nTradeoff: segura, pouco memorável." },
+    { "id": "qse-b", "x": 1240, "y": -180, "w": 520,
+      "text": "B · Trajetória — a biografia vira percurso, com marcos e o capacete abrindo a linha. Sobre o azul, ganha peso institucional.\nTradeoff: o depoimento encolhe para três parágrafos." },
+    { "id": "qse-c", "x": 2480, "y": -180, "w": 520,
+      "text": "C · A voz dele — uma frase da fala ocupa a dobra e o resto vira apoio.\nTradeoff: é a mais arriscada; aposta tudo na frase e corta metade do depoimento." },
+    { "id": "fec", "x": 0, "y": 900, "w": 520,
+      "text": "FECHO — três direções\n\nA · Cédula — reproduz o gesto que o eleitor vai repetir na urna. O número deixa de ser enfeite e vira instrução.\nTradeoff: peça literal, corre o risco de parecer manual." },
+    { "id": "fec-b", "x": 1240, "y": 900, "w": 520,
+      "text": "B · Faixa — o lema em escala de rua sobre o verde, o número como assinatura à direita.\nTradeoff: o verde chapado é forte; disputa atenção com o herói se a página inteira for vista de enfiada." },
+    { "id": "fec-c", "x": 2480, "y": 900, "w": 520,
+      "text": "C · Compromissos — recapitula as cinco bandeiras antes do número, para quem rolou rápido.\nTradeoff: é o mais denso dos três, e repete conteúdo que já apareceu acima." }
+  ],
+  "launch": { "view": "canvas" }
+}

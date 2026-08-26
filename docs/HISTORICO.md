@@ -2,6 +2,38 @@
 
 Diário append-only. Entrada mais recente no topo.
 
+## 2026-08-26 — Proteção das crianças ganha dois números
+
+**O quê:** o bloco "Proteção das crianças" passou a exibir dois números em vez de um. O
+**5.015** (registros de desaparecimento por ano em SP) ocupa agora o lugar do número grande; o
+**257** (crianças que não voltaram mais para casa) desceu para um segundo dado, menor, separado
+por um filete amarelo, com uma única linha de fonte valendo para os dois. Corrigidos também dois
+defeitos de CSS no mesmo bloco: o número 257 saía com 15px em vez de 58px porque a regra do texto
+ao lado (`.criancas__segundo span`) também casava o `<span>` de dentro do número por
+especificidade — resolvido com seletor de filho direto (`> span`); e número e texto ficavam em
+alturas diferentes por estarem em `align-items:baseline` (que alinha pela primeira linha de um
+texto de duas linhas) — trocado para `center`.
+
+**Por quê:** sugestão do próprio candidato, trazida pelo CEO. O 257 sozinho é só o estoque de
+crianças que não voltaram; o 5.015 dá a escala do problema (fluxo anual de registros, a maioria
+resolvida). Substituir um pelo outro deixaria a peça factualmente errada — a legenda antiga dizia
+"crianças desaparecidas", o que não vale para um registro que se resolve. Manter os dois preserva
+a precisão e explica por que o aplicativo de alerta importa: ele atua na distância entre um número
+e o outro. ⚠️ A fonte do 5.015 ainda não foi confirmada — o CEO forneceu o número, não a fonte; a
+linha "Ministério da Justiça — Relatório 2025" foi mantida por suposição e pode estar errada se o
+5.015 vier de outra fonte (ex. SSP-SP).
+
+**Também nesta rodada:** `.gitignore` passou a excluir os artefatos pesados de `docs/design/` — a
+exploração de direções visuais feita com a skill `/design` do Claude Code. O canvas montado (com o
+editor embutido) e os `.dc.html` com fontes da marca em base64 não são servidos pelo site; ficam
+versionados só `gera-artboards.py` e `canvas.json`, que reconstroem tudo.
+
+**Conferido:** Chrome de verdade em 360, 414, 768, 1280 e 1440 px — sem rolagem horizontal,
+console limpo, nenhuma requisição quebrada, zero reprovações de contraste, 24 de 24 blocos
+revelando ao rolar e os números voltando ao valor original ao fim da contagem.
+
+**Arquivos-chave:** `index.html` (bloco "Proteção das crianças"), `.gitignore`, `docs/design/`.
+
 ## 2026-08-25 — O "em breve" vira a landing page completa do candidato
 
 **O quê:** `index.html` deixou de ser a tela única "em breve" e passou a ser uma landing page de
